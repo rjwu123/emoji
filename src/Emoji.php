@@ -1,8 +1,6 @@
 <?php
 namespace rjwu123\emoji;
 
-namespace Emoji ;
-
 use Emoji\Lib\BaseConvert;
 
 class Emoji{
