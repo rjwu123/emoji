@@ -7,7 +7,6 @@
 <?php
 
 use rjwu123\emoji\Emoji;
-use Emoji\Lib\UnicodeConvert;
 
 $testStr = "my heart is broken 💔" ;
 
