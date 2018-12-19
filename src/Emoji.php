@@ -47,7 +47,8 @@ class Emoji
         $tagPrefix = preg_quote($this->tagArray[0], "/");
         $tagSuffix = preg_quote($this->tagArray[1], "/");
         $text = preg_replace_callback("/$tagPrefix([\s\S]*?)$tagSuffix/i", function ($match) {
-            $unicode_str = substr($match[1], count($this->prefix));
+            $count = !is_array($this->prefix) ? count(str_split($this->prefix, 1)) : count($this->prefix);
+            $unicode_str = substr($match[1], $count);
             return $this->unicode_to_bin($unicode_str);
         }, $text);
         return $text;
